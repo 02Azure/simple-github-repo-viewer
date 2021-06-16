@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import githubMark from "../assets/github-mark.png"
 
 export default function Home() {
@@ -7,16 +7,22 @@ export default function Home() {
   const [usernameInput, setUsernameInput] = useState("")
 
   return(
-    <div>
-      <h1>Github User's Repositories Viewer</h1>
-      <img src={ githubMark } alt="github_mark_logo" />
-      <input type="text" value={ usernameInput } onChange = { event => setUsernameInput(event.target.value) } />
-      <button 
-        onClick = { () => history.push(`/users/${usernameInput}`)}
-        placeholder = "Github username"
-      >
-        Go!
-      </button>
+    <div id="home-page" class="page">
+      <h1 id="home-title">Github User's Repositories Viewer</h1>
+
+      <div id="logo-input-container">
+        <img id="home-logo" src={ githubMark } alt="github_mark_logo" />
+        <Link to="/users/02Azure">For example, my github account: 02azure</Link>
+        <div>
+          <input 
+            type="text" 
+            value={ usernameInput } 
+            onChange = { event => setUsernameInput(event.target.value) } 
+            placeholder = "Github username"
+          />
+          <button onClick = { () => history.push(`/users/${usernameInput}`)}>Go!</button>
+        </div>
+      </div>
     </div>
   )
 }

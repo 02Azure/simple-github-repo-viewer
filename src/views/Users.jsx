@@ -51,18 +51,18 @@ export default function Home() {
 
   return(
     <div>
-      <input type="text" value={ usernameInput } onChange = { event => setUsernameInput(event.target.value) } />
-      <button 
-        onClick = { () => history.push(`/users/${usernameInput}`)}
+      <input 
+        type="text" 
+        value={ usernameInput } 
+        onChange = { event => setUsernameInput(event.target.value) } 
         placeholder = "Github username"
-      >
-        Go!
-      </button>
-      <div>
+      />
+      <button onClick = { () => history.push(`/users/${usernameInput}`)}>Go!</button>
+      <div id="user-data-container">
         <UserBox
           { ...userData }
         />
-        <div>{ repoCards }</div>
+        <div id = "repo-cards-container">{ repoCards }</div>
       </div>
 
     </div>
