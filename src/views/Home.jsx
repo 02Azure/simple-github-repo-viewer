@@ -20,7 +20,7 @@ export default function Home() {
             onChange = { event => setUsernameInput(event.target.value) } 
             placeholder = "Github username"
           />
-          <button onClick = { () => history.push(`/users/${usernameInput}`)}>Go!</button>
+          <button class="username-button" onClick = { () => history.push(`/users/${usernameInput}`)}>Go!</button>
         </div>
       </div>
     </div>

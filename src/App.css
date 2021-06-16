@@ -3,6 +3,24 @@
   padding: 2em
 }
 
+input, button {
+  font-size:1.2em
+}
+
+.username-button {
+  margin-left: 1em;
+  padding:0 0.5em
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+a:hover {
+  text-decoration: underline
+}
+
 /* HOME PAGE */
 #home-page {
   display: flex;
@@ -25,3 +43,55 @@
 }
 
 /* USERS PAGE */
+#user-data-container {
+  display: flex;
+  justify-content: space-between
+}
+
+#userbox {
+  padding: 1em;
+  display:flex;
+  flex-direction: column;
+  border: solid black 2px;
+  flex: 0 0 250px;
+  margin-right: 1em;
+  height: 86vh
+}
+
+#input-container {
+  display: flex;
+  justify-content: center;
+}
+
+#user-avatar {
+  width: 80%;
+  border-radius: 50%;
+  border: solid dodgerblue 5px;
+}
+
+#repo-cards-container {
+  display:grid;
+  height: 80vh;
+  overflow-y: auto;
+  grid-template-columns:repeat(auto-fill, minmax(310px,1fr));
+  grid-gap:20px;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  border: solid blue 2px;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.repo-title {
+  text-align: center;
+  min-height: 40%; 
+  max-height: 40%
+}
+
+.repo-detail {
+  height: 60%
+}
+
